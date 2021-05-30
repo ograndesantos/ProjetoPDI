@@ -1,0 +1,243 @@
+{% load static%}
+
+<!DOCTYPE html>
+
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Descarrega o teu ficheiro e nós colocamos no local correto</title>
+
+
+		<!-- WEB FONTS -->
+		<link href= "{% static 'http://fonts.googleapis.com/css?family=Roboto:100,300,100italic,400,300italic'%}" rel='stylesheet' type='text/css'>
+		<link href="{% static 'http://fonts.googleapis.com/css?family=Open+Sans:400,300'%}" rel='stylesheet' type='text/css'>
+
+		<!-- BOOTSTRAP -->
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+		<!-- FONT AWESOME -->
+		<script src="https://kit.fontawesome.com/c1a2cc467f.js" crossorigin="anonymous"></script>
+
+
+		<!-- CUSTOM STYLING -->
+		<link href="{% static 'cursos/styles.css' %} " rel="stylesheet">
+		<!-- PRELOADER -->
+		<link href="{%  static 'cursos/loader.css '%}" rel="stylesheet">
+
+	</head>
+    <style >
+        #header {
+            background: url('../static/cursos/image/bsbild_fullhd_01.jpg') no-repeat center center;
+            background-size: cover;
+            height: 100vh;
+            padding: 0px;
+        }
+
+        #subscribe {
+            background: url('../static/cursos/image/bg-subscribe.jpg') no-repeat fixed center center / cover rgba(0, 0, 0, 0);
+            padding: 0px;
+            min-height: 430px;
+            }
+        #navbar{
+	display: flex;
+	justify-content: space-around;
+	align-items: center ;
+	min-height: 8vh;
+	background-color: dimgray;
+}
+
+.menu-opcoes{
+	display: flex;
+	background-color: dimgray;
+	justify-content: space-around;
+	width: 40%;
+}
+
+.menu-opcoes a{
+	color: black;
+	text-decoration: none;
+	letter-spacing: 2px;
+}
+
+.drop-menu{
+	cursor: pointer;
+}
+
+.drop-menu div{
+	width: 25px;
+	height: 5px;
+	background-color: grey;
+	margin: 5px;
+}
+
+
+
+
+    </style>
+
+<body>
+	<!-- PRELOADER -->
+		<!--<div id="loader-wrapper">--
+			<div id="loader"><div class="sk-spinner sk-spinner-cube-grid"><div class="sk-cube"></div><div class="sk-cube"></div><div class="sk-cube"></div><div class="sk-cube"></div><div class="sk-cube"></div><div class="sk-cube"></div><div class="sk-cube"></div><div class="sk-cube"></div><div class="sk-cube"></div></div></div>
+		</div>-->
+    <!--Nav Bar-->
+    <nav id="navbar" class="container-fluid">
+		<div class="">
+		</div>
+		<div class="menu-opcoes">
+			<div class="link"><a href="" class="link"></a></div></div>
+		<div class="menu-opcoes">
+			<div class="link"><a href="#" class="link">Quem Somos</a></div>
+			<div class="link"><a href="#" class="link">O que fazemos</a></div>
+            <div class="link"><a href="#" class="link">Nossa Missão</a></div>
+			<div class="link"><a href="http://127.0.0.1:8000/admin" class="link active">Login</a></div>
+		</div>
+
+
+	</nav>
+
+	<!-- HEADER -->
+		<section id="header">
+			<div class="container">
+				<div class="row text-center">
+					<div class="col-md-8">
+
+						<img class="logo" src="{% static  'cursos/image/Catalog.me.png'%}" />
+						<h1 class="white-text">Bem-vindo ao nosso Website</h1>
+						<h5 class="white-text">Descarrega aqui o teu ficheiro e nós tratamos do resto</h5>
+						<div id="countdown" class="white-text"></div>
+					</div>
+				</div>
+			</div>
+			<div class="animation">
+			<a class="arrow-down-animation" data-scroll href="#about"><i class="fa fa-angle-down"></i></a>
+			</div>
+		</section>
+	<!-- HEADER ENDS -->
+
+	<!-- ABOUT -->
+		<section id="about">
+			<div class="container">
+				<div class="row text-center">
+					<!-- Section 1 -->
+					<div data-sr="enter top over 1s, wait 0.3s, move 24px, reset" class="col-md-4">
+						<i class="fa fa-laptop"></i>
+						<h3>Quem Somos</h3>
+						<div class="colored-line-small-center"></div>
+						<p>Somos dois jovens estudantes da Coimbra Business School que realizámos este projeto </p>
+					</div>
+					<!-- Section 2 -->
+					<div data-sr="enter bottom over 1s, wait 0.3s, move 24px, reset" class="col-md-4 middle">
+						<i class="fa fa-lightbulb-o"></i>
+						<h3>O que fazemos</h3>
+						<div class="colored-line-small-center"></div>
+						<p>Criámos um algoritmo que faça uma classificação automatica de documentos e ficheiros </p>
+					</div>
+					<!-- Section 3 -->
+					<div data-sr="enter top over 1s, wait 0.3s, move 24px, reset" class="col-md-4">
+						<i class="fa fa-newspaper-o"></i>
+						<h3>Nossa Missão</h3>
+						<div class="colored-line-small-center"></div>
+						<p>O nosso objetivo é facilitar a organização de ficheiros e documentos, colocando esses mesmos
+							ficheiros em pastas espeficicas</p>
+					</div>
+				</div>
+			</div>
+		</section>
+	<!-- ABOUT ENDS -->
+
+	<!-- SUBSCRIBE -->
+		<section id="subscribe">
+			<div class="container">
+				<i data-sr="ease-in over 1s, reset" class="fa fa-envelope icontop"></i>
+				<div class="row text-center">
+					<div class="col-md-8 col-md-offset-2">
+						<h2 data-sr="enter top over 1s, wait 0.3s, move 24px, reset" class="white-text">Acede á nossa newsletter</h2>
+						<h5 data-sr="enter bottom over 1s, wait 0.3s, move 24px, reset" class="white-text">Mantenha-se atualizado </h5>
+						<!-- MAILCHIMP FORM -->
+						<form id="mc_form" role="form">
+							<input data-sr="enter top over 1s, wait 0.3s, move 24px, reset" type="email" class="form-control" id="mc-email" name="mc-email" placeholder="Escreva o seu email" />
+							<button data-sr="enter bottom over 1s, wait 0.3s, move 24px, reset" type="submit" class="button-leweb">Submeter</button>
+							<label for="mc-email" class="mc-email"></label>
+						</form>
+						<!-- MAILCHIMP FORM ENDS -->
+					</div>
+				</div>
+			</div>
+		</section>
+	<!-- SUBSCRIBE ENDS -->
+
+	<!-- CONTACT US -->
+		<section id="contact">
+			<div class="container">
+				<div class="row text-center">
+					<div class="col-md-8 col-md-offset-2">
+						<!-- CONTACT FORM -->
+						<form method="post" action="">
+							<p data-sr="enter top over 1s, wait 0.3s, move 24px, reset" class="contact-info text-center">Entre em contato connosco. Preencha o formulário abaixo. Todos os campos são necessários.</p>
+							<div data-sr="enter left over 1s, wait 0.3s, move 24px, reset" class="form-group col-md-6">
+								<input type="text" class="form-control" id="name" name="name" placeholder="O teu Nome" />
+							</div>
+							<div data-sr="enter right over 1s, wait 0.3s, move 24px, reset" class="form-group col-md-6">
+								<input type="email" class="form-control" id="email" name="email" placeholder="O teu Email" />
+							</div>
+							<div data-sr="enter bottom over 1s, wait 0.3s, move 24px, reset" class="form-group col-md-12">
+								<input type="text" class="form-control" id="phone" name="phone" placeholder="Número Telfone" />
+							</div>
+							<div data-sr="enter bottom over 1s, wait 0.3s, move 24px, reset" class="form-group col-md-12">
+								<textarea cols="60" rows="3" id="comment" name="comment" class="form-control" placeholder="Comentários..."></textarea>
+							</div>
+							<div data-sr="enter bottom over 1s, wait 0.3s, move 24px, reset" class="form-group col-sm-12 ">
+								<button type="submit" class="button-leweb">Enviar Mensagem</button>
+							</div>
+						</form>
+
+						<!-- AFTER SENDING MESSAGE -->
+						<div id="success" class="col-md-12 col-sm-12 text-center">
+							<i class="fa fa-check-circle"></i>
+							<strong>Mensagem enviada com sucesso</strong>
+							<p>  Obrigado por nos contactares. Respondaremos o mais brevemente possível</p>
+						</div>
+						<!-- CONTACT FORM ENDS -->
+					</div>
+				</div>
+			</div>
+		</section>
+	<!-- CONTACT ENDS -->
+
+	<!-- FOOTER -->
+		<footer id="footer">
+			<div class="container">
+				<div class="row text-center">
+					<p>
+						&copy; 2016 Shine | DESIGN BY <a href="http://templatestock.co">Template Stock</a>
+						<span class="social">
+							<a href="https://www.facebook.com/cbsiscac"><i class="fa fa-facebook-square"></i></a>
+                            <a href="https://twitter.com/ISCACoimbra"><i class="fa fa-twitter-square"></i></a>
+							<a href="login.html"><i class="fa fa-google-plus-square"></i></a>
+						</span>
+					</p>
+				</div>
+			</div>
+		</footer>
+	<!-- FOOTER ENDS -->
+
+
+		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+		<!-- Include all compiled plugins (below), or include individual files as needed -->
+		<script src="{% static 'js/bootstrap.min.js'%}"></script>
+		<!-- SMOOTH SCROLL -->
+		<script src="{%static 'js/smooth-scroll.min.js'%}"></script>
+		<!-- PARALLAX IMG -->
+		<script src="{% static  'js/jquery.parallax-1.1.3.js'%}"></script>
+		<!-- SCROLL REVEAL -->
+		<script src="{% static 'js/scrollReveal.min.js'%}"></script>
+		<!-- FUNCTIONS -->
+		<script src="{% static 'js/functions.js'%}"></script>
+
+</body>
+</html>
